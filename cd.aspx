@@ -1,0 +1,129 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="cd.aspx.cs" Inherits="cd" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Home | Bootstrap .net Templates</title>
+    <%-- ------ CSS ------ --%>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+        rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header id="header">
+    <div class="top-bar">
+    <div class="container">
+    <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <div class="top-number"><p>&nbsp;</p></div>
+    </div>
+     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <div class="social">
+     <ul class="social-share">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>        
+        <li><a href="#"><i class="fa fa-skype"></i></a></li>
+     </ul>     
+       
+    </div>
+    </div>
+    </div>
+      </div><%--container--%>
+        </div><%--/top-bar--%>
+      <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    &nbsp;</div>
+				
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="decorated_home.aspx">Home</a></li>
+                       <li><a href="audio.aspx">audio</a></li>
+                        <li><a href="movie.aspx">movies</a></li>                        
+                       <!-- <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="~/contactus.aspx">Blog Single</a></li>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">404</a></li>
+                                <li><a href="#">Shortcodes</a></li>
+                            </ul>
+                        </li> -->
+                        <li><a href="software.aspx">softwares</a></li> 
+                        <li><a href="games.aspx">games</a></li> 
+                        <li><a href="userlogin.aspx">log in</a></li> 
+                         <li><a href="customersignup.aspx">signup</a></li> 
+                        
+                                               
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    <div style="height: 89px; width: 1478px">
+    
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        ALL CDs</div>
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+        DataKeyNames="CD_ID" DataSourceID="SqlDataSource1">
+        <Columns>
+            <asp:BoundField DataField="CD_ID" HeaderText="CD_ID" ReadOnly="True" 
+                SortExpression="CD_ID" />
+            <asp:BoundField DataField="IMPORT_DATE" HeaderText="IMPORT_DATE" 
+                SortExpression="IMPORT_DATE" />
+            <asp:BoundField DataField="CD_NAME" HeaderText="CD_NAME" 
+                SortExpression="CD_NAME" />
+            <asp:BoundField DataField="PRICE" HeaderText="PRICE" SortExpression="PRICE" />
+            <asp:BoundField DataField="CATEGORY_ID" HeaderText="CATEGORY_ID" 
+                SortExpression="CATEGORY_ID" />
+            <asp:BoundField DataField="GENRE_ID" HeaderText="GENRE_ID" 
+                SortExpression="GENRE_ID" />
+            <asp:BoundField DataField="ARTIST_LASTNAME" HeaderText="ARTIST_LASTNAME" 
+                SortExpression="ARTIST_LASTNAME" />
+            <asp:BoundField DataField="ARTIST_FIRSTNAME" HeaderText="ARTIST_FIRSTNAME" 
+                SortExpression="ARTIST_FIRSTNAME" />
+            <asp:BoundField DataField="DIRECTOR_LASTNAME" HeaderText="DIRECTOR_LASTNAME" 
+                SortExpression="DIRECTOR_LASTNAME" />
+            <asp:BoundField DataField="DIRECTOR_FIRSTNAME" HeaderText="DIRECTOR_FIRSTNAME" 
+                SortExpression="DIRECTOR_FIRSTNAME" />
+            <asp:BoundField DataField="COMPANY" HeaderText="COMPANY" 
+                SortExpression="COMPANY" />
+            <asp:BoundField DataField="RELEASE_DATE" HeaderText="RELEASE_DATE" 
+                SortExpression="RELEASE_DATE" />
+            <asp:BoundField DataField="ORIGIN" HeaderText="ORIGIN" 
+                SortExpression="ORIGIN" />
+        </Columns>
+    </asp:GridView>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:cd %>" 
+        ProviderName="<%$ ConnectionStrings:cd.ProviderName %>" 
+        SelectCommand="SELECT * FROM &quot;CD_COLLECTION&quot;"></asp:SqlDataSource>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
+        Text="Back to Home" />
+    </form>
+</body>
+</html>
